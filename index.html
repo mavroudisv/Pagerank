@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>PageRank Implementation</title>
+	<link rel="stylesheet" type="text/css" href="css/view.css" media="all">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="js/jquery-linedtextarea.js"></script>
+	<script type="text/javascript" src="js/view.js"></script>
+</head>
+
+<body id="main_body" >
+	
+	<img id="top" src="img/top.png" alt="">
+	<div id="form_container">	
+		<h1><a>PageRank Implementation</a></h1>
+		<form id="pagerank" class="appnitro" action="pagerank.php" method="post" >
+			<div class="form_description">
+				<h2><b>PageRank Implementation</b></h2>
+				<p>A simple pagerank implementation in php!</p>
+			<a href="pagerank.zip" target="blank"><img src="img/zip.png" align="right" alt="Download zip!" height="40" width="40"></a>
+			<a href="pagerank.txt" target="blank"><img src="img/php.png" align="right" alt="Download zip!" height="40" width="40"></a>
+
+			</div>	
+				
+		
+							
+			<label class="description" for="element_2">Nodes & Links</label>
+			Each line represents a node, outbound links are separated by commas (e.g, 1,4,5,8).
+			<textarea id="nodes" name="nodes" class="lined" rows="12" cols="60">
+5, 11
+2, 3, 11
+8, 3, 6, 4, 3
+2, 1
+9, 7, 5
+10
+10
+5, 6, 2, 10
+10, 4
+5, 8, 2, 3
+4
+</textarea> 
+		
+	<li id="li_1" >
+
+		<label class="description" for="element_1">Damping Factor </label>
+		<div>
+			<input id="damping" name="damping" class="element text tiny" type="text" maxlength="10" value="0.85"/> 
+		</div> 
+		</li>
+		<li id="li_1" ><div>
+			<input id="list" name="list" class="element checkbox" type="checkbox" value="1" checked/>
+			<label class="choice" for="element_3_1">List</label>
+		</div> 
+		<li id="li_1" ><div>
+			<input id="graph" name="graph" class="element checkbox" type="checkbox" value="1" checked/>
+			<label class="choice" for="element_3_1">Graph</label>
+		</div> 
+		</li>	
+			<li class="section_break">	
+			<input type="submit" name="submit" value="Submit" />
+		</form>	
+		<div id="footer">
+			<a href="http://mavroudisv.eu" target="blank">Vasilis Mavroudis 2012</a>
+		</div>
+
+	</div>
+	<img id="bottom" src="img/bottom.png" alt="">
+ <script>
+$(function() {
+	$(".lined").linedtextarea(
+		{}
+	);
+});
+</script>
+
+</body>
+</html>
